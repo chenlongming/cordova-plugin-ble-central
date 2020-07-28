@@ -87,6 +87,8 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
     private static final String START_STATE_NOTIFICATIONS = "startStateNotifications";
     private static final String STOP_STATE_NOTIFICATIONS = "stopStateNotifications";
 
+    private static final String LOCATION_SETTING = "locationSetting";
+
     // callbacks
     CallbackContext discoverCallback;
     private CallbackContext enableBluetoothCallback;
@@ -330,6 +332,11 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
         } else if (action.equals(BONDED_DEVICES)) {
 
             getBondedDevices(callbackContext);
+
+        } else if (action.equals(LOCATION_SETTING)) {
+            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+            cordova.getActivity().startActivity(intent);
+            callbackContext.success();
 
         } else {
 

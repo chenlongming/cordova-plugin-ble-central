@@ -78,6 +78,7 @@ See Apple's documentation about [Protected Resources](https://developer.apple.co
 - [ble.stopNotification](#stopnotification)
 - [ble.isEnabled](#isenabled)
 - [ble.isLocationEnabled](#islocationenabled)
+- [ble.locationSetting](#locationSetting)
 - [ble.isConnected](#isconnected)
 - [ble.startStateNotifications](#startstatenotifications)
 - [ble.stopStateNotifications](#stopstatenotifications)
@@ -633,6 +634,16 @@ Function `isLocationEnabled` calls the success callback when location services a
             console.log("location services are *not* enabled");
         }
     );
+    
+## locationSetting
+
+open location settings.
+
+    ble.isLocationEnabled(success, () => { ble.locationSetting() });
+
+### Supported Platforms
+
+ * Android
 
 ## startStateNotifications
 
