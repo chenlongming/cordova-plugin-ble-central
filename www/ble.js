@@ -225,6 +225,11 @@ module.exports = {
         cordova.exec(success, failure, 'BLE', 'isLocationEnabled', []);
     },
 
+    // Android only
+    locationSetting: function (success, failure) {
+        cordova.exec(success, failure, 'BLE', 'locationSetting', []);
+    },
+
     enable: function (success, failure) {
         cordova.exec(success, failure, "BLE", "enable", []);
     },
