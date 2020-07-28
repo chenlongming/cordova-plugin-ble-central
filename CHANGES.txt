@@ -1,3 +1,7 @@
+= 1.2.6 =
+Add locationSetting method for Android
+open location settings
+
 = 1.2.5 =
 Add setPin method for Android #718 Thanks untilbit
 Give the user feedback after an MTU size request #715 Thanks agren
